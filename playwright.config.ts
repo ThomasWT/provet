@@ -25,12 +25,6 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
-    {
-      name: 'Mobile Safari',
-      use: {
-        ...devices['iPhone 13'],
-      },
-    },
   ],
   webServer: {
     command: 'pnpm dev',
