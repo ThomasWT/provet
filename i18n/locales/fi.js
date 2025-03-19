@@ -1,0 +1,20 @@
+export default {
+    home: 'Koti',
+    signup: 'Rekisteröidy',
+    login: 'Kirjaudu',
+    logout: 'Kirjaudu ulos',
+    betterSoftware: 'Parempi ohjelmisto. Parempi hoito.',
+    offerConsistentProactivePersonalizedCare: 'Tarjoa johdonmukaista, ennakoivaa ja yksilöllistä hoitoa pitkällä aikavälillä',
+    withProvetCloudHealthPlans: 'Provet Cloudin terveyssuunnitelmien avulla voit suunnitella joustavia ja helposti hallittavia palvelupaketteja, jotka edistävät asiakasuskollisuutta, tarjoavat tasaista tulovirtaa ja auttavat saavuttamaan parempia hoidollisia tuloksia.',
+    contactSales: 'Ota yhteyttä myyntiin',
+    email: 'Sähköposti',
+    password: 'Salasana',
+    repeatPassword: 'Toista salasana',
+    receiveOccasionalProductUpdatesAndAnnouncements: 'Saat ajoittain päivityksiä tuotteista ja ilmoituksia',
+    alreadyHaveAnAccount: 'Onko sinulla jo tili?',
+    showPassword: 'Näytä salasana',
+    healthPlans: 'Terveyssuunnitelmat',
+    backToHome: 'Takaisin kotiin',
+    success: 'Onnistui!',
+    weHaveReceivedYourRequestAndWillGetBackToYouAsSoonAsPossible: 'Olemme vastaanottaneet pyyntösi ja palaamme asiaan mahdollisimman pian.'    
+}
