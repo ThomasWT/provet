@@ -2,7 +2,7 @@
 const dontlook = ref(false)
 
 export const useCat = () => {
-    const setDontLook = (value: boolean) => {
+    const setDontLook = (value: boolean): void => {
         dontlook.value = value
     }
 

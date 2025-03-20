@@ -99,7 +99,7 @@ const formValidation = reactive<FormValidation>({
 // If the user wants to receive occasional product updates and announcements.
 const signupUpdates = ref(false)
 
-const togglePassword = (passwordInput: string) => {
+const togglePassword = (passwordInput: string): void => {
     switch (passwordInput) {
         case 'password':
             showPassword.value = !showPassword.value
@@ -110,7 +110,7 @@ const togglePassword = (passwordInput: string) => {
     }
 }
 
-const signup = () => {
+const signup = (): void => {
     // Validate all fields before submitting
     isEmailValid()
     isPasswordValid()
@@ -130,7 +130,7 @@ const signup = () => {
     }, 1200)
 }
 
-const getPasswordIcon = (isVisible: boolean) => {
+const getPasswordIcon = (isVisible: boolean): string => {
     return isVisible ? 'interface-edit-off' : 'interface-edit-on'
 }
 
@@ -204,18 +204,18 @@ watch(() => [formValidation.email.val, formValidation.password.val, formValidati
         }
     })
 
-const isFormValid = computed(() => {
+const isFormValid = computed((): boolean => {
     const hasErrors = formValidation.email.error || formValidation.password.error || formValidation.repeatPassword.error
     const isDirty = formValidation.email.dirty || formValidation.password.dirty || formValidation.repeatPassword.dirty
     return !(hasErrors && isDirty)
 })
 
 //Composable for the cat.
-const useCatComposable = useCat()
+const useCatComposable = useCat();
 
 // Watch the showPassword variable to toggle the cat's vision.
 watch([showPassword, showRepeatPassword], ([newShowPassword, newShowRepeatPassword]) => {
-    useCatComposable.setDontLook(newShowPassword || newShowRepeatPassword)
+    useCatComposable.setDontLook(newShowPassword || newShowRepeatPassword);
 })
 
 </script>

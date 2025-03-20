@@ -23,23 +23,26 @@ import '@provetcloud/web-components/lib/Stack'
 import '@provetcloud/web-components/lib/Dropdown'
 import '@provetcloud/web-components/lib/Icon'
 import '@provetcloud/web-components/lib/DropdownItem'
+import type { LocaleObject } from '@nuxtjs/i18n'
+
+
 const open = ref(false)
 const { locale, locales, setLocale } = useI18n()
 
-const currentLocale = computed(() => {
+const currentLocale = computed((): LocaleObject => {
   return locales.value.filter(i => i.code === locale.value)[0]
 })
 
-const toggleDropdown = () => {
+const toggleDropdown = (): void => {
   open.value = !open.value
 }
 
-const handleLocaleChange = (code: string) => {
-  setLocale(code as 'en' | 'fi')
+const handleLocaleChange = (code: LocaleObject['code']): void => {
+  setLocale(code)
   open.value = false
 }
 
-const availableLocales = computed(() => {
+const availableLocales = computed((): LocaleObject[] => {
   return locales.value.filter(i => i.code !== locale.value)
 })
 </script>

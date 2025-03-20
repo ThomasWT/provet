@@ -22,8 +22,6 @@
 
 <style scoped>
 
-
-
 .contact-info {
     padding: 0 var(--n-space-xl);
 }
