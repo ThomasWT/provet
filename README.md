@@ -4,10 +4,10 @@ A modern web application showcasing the implementation of Provet Cloud's design 
 
 ## Project Overview
 
-This portfolio project implements a health plans management interface using Provet Cloud's design system and components. It serves as a demonstration of:
+This portfolio project implements a signup page using Provet Cloud's design system and components. It serves as a demonstration of:
 
 - Seamless integration with Provet Cloud's design system
-- Implementation of Provet Cloud web components in a Vue.js environment
+- Implementation of Provet Cloud web components in a Nuxt 3/Vue.js environment
 - Internationalization support for multiple markets
 
 ## Key Technical Implementations
