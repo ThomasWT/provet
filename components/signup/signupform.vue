@@ -153,7 +153,7 @@ const isEmailValid = (): boolean => {
 const isPasswordValid = (): boolean => {
     // If the password is dirty, we need to validate it. Otherwise user haven't typed anything yet.
     if (formValidation.password.dirty) {
-        let isPasswordAbove6Chars = formValidation.password.val.length > 6
+        let isPasswordAbove6Chars = formValidation.password.val.length >= 6
         formValidation.password.error = isPasswordAbove6Chars ? undefined : t('minimumOf6CharactersRequired')
     }
 
