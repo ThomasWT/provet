@@ -13,11 +13,17 @@
                     <polyline id="check" stroke="#FFFFFF" stroke-width="4" points="41 70 56 85 92 49"></polyline>
                 </g>
             </svg>
-            <provet-button class="fade-in-up" variant="primary" expand>{{ $t('backToHome') }}</provet-button>
+            <provet-button class="fade-in-up" variant="primary" @click="resetForm" expand>{{ $t('backToHome') }}</provet-button>
         </provet-stack>
     </div>
 </template>
 
+<script setup lang="ts">
+
+const resetForm = () => {
+    window?.location.reload()
+}
+</script>
 <style scoped>
 @keyframes outline {
     from {

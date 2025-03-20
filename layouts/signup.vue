@@ -1,5 +1,7 @@
 <template>
-    <div class="signup-container n-reset n-container-xl">
+    <div class="signup-container n-reset">
+        
+        <langswitcher class="langswitcher" />
         <div class="signup-hero">
             <div class="signup-hero-content">
                 <div class="signup-hero-text n-stack n-gap-xl n-typeset">
@@ -13,7 +15,6 @@
             </div>
         </div>
         <div class="signup-form n-justify-center n-items-center n-relative">
-            <langswitcher class="langswitcher" />
             <slot />
             <SignupCat />
         </div>
@@ -25,6 +26,7 @@
     position: absolute;
     top: 8px;
     right: 8px;
+    z-index: 1
 }
 .signup-container {
     display: flex;

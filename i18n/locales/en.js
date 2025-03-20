@@ -14,6 +14,7 @@ export default {
     alreadyHaveAnAccount: 'Already have an account?',
     signup: 'Sign up',
     showPassword: 'Show password',
+    hidePassword: 'Hide password',
     healthPlans: 'Health Plans',
     backToHome: 'Back to home',
     success: 'Success!',
