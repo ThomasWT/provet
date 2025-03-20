@@ -13,8 +13,15 @@ export default {
     receiveOccasionalProductUpdatesAndAnnouncements: 'Saat ajoittain päivityksiä tuotteista ja ilmoituksia',
     alreadyHaveAnAccount: 'Onko sinulla jo tili?',
     showPassword: 'Näytä salasana',
+    hidePassword: 'Piilota salasana',
     healthPlans: 'Terveyssuunnitelmat',
     backToHome: 'Takaisin kotiin',
     success: 'Onnistui!',
-    weHaveReceivedYourRequestAndWillGetBackToYouAsSoonAsPossible: 'Olemme vastaanottaneet pyyntösi ja palaamme asiaan mahdollisimman pian.'    
+    weHaveReceivedYourRequestAndWillGetBackToYouAsSoonAsPossible: 'Olemme vastaanottaneet pyyntösi ja palaamme asiaan mahdollisimman pian.',
+    minimumOf6CharactersRequired: 'Vähintään 6 merkkiä vaaditaan',
+    pleaseEnterAPassword: 'Syötä salasana',
+    passwordsDoNotMatch: 'Salasanat eivät täsmää',
+    pleaseRepeatYourPassword: 'Toista salasana',
+    pleaseEnterYourEmail: 'Syötä sähköposti',
+    invalidEmail: 'Virheellinen sähköposti',
 }

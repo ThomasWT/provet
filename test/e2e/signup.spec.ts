@@ -76,7 +76,7 @@ test.describe('Signup Flow', () => {
     await page.locator('provet-input[name="password"] input').blur()
 
     // Check for password validation error
-    await expect(page.locator('provet-input[name="password"]')).toHaveAttribute('error', 'Minimum of 8 characters required')
+    await expect(page.locator('provet-input[name="password"]')).toHaveAttribute('error', 'Minimum of 6 characters required')
 
     // Fill in valid password
     await page.locator('provet-input[name="password"] input').fill('validpassword123')

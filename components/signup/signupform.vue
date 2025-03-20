@@ -56,6 +56,8 @@ import '@provetcloud/web-components/lib/Fieldset'
 import '@provetcloud/web-components/lib/Divider'
 import '@provetcloud/web-components/lib/Tooltip'
 
+const { t, locale } = useI18n()
+
 interface InputValidation {
     dirty: boolean,
     val: string,
@@ -138,12 +140,12 @@ const isEmailValid = (): boolean => {
     // If the email is dirty, we need to validate it. Otherwise user haven't typed anything yet.
     if (formValidation.email.dirty) {
         const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-        formValidation.email.error = emailRegex.test(formValidation.email.val) ? undefined : 'Invalid email'
+        formValidation.email.error = emailRegex.test(formValidation.email.val) ? undefined : t('invalidEmail')
     }
 
     // If the email is empty, we need to show an error message
     if (formValidation.email.val == '') {
-        formValidation.email.error = 'Please enter your email'
+        formValidation.email.error = t('pleaseEnterYourEmail')
     }
     return true
 }
@@ -151,13 +153,13 @@ const isEmailValid = (): boolean => {
 const isPasswordValid = (): boolean => {
     // If the password is dirty, we need to validate it. Otherwise user haven't typed anything yet.
     if (formValidation.password.dirty) {
-        let isPasswordAbove8Chars = formValidation.password.val.length > 8
-        formValidation.password.error = isPasswordAbove8Chars ? undefined : 'Minimum of 8 characters required'
+        let isPasswordAbove6Chars = formValidation.password.val.length > 6
+        formValidation.password.error = isPasswordAbove6Chars ? undefined : t('minimumOf6CharactersRequired')
     }
 
     // If the password is empty, we need to show an error message
     if (formValidation.password.val == '') {
-        formValidation.password.error = 'Please enter a password'
+        formValidation.password.error = t('pleaseEnterAPassword')
     }
     return true
 }
@@ -167,11 +169,11 @@ const isRepeatPasswordValid = (): boolean => {
     if (formValidation.repeatPassword.dirty) {
         // Check if the repeat password matches the password
         const isPasswordMatch = formValidation.repeatPassword.val === formValidation.password.val
-        formValidation.repeatPassword.error = isPasswordMatch ? undefined : 'Passwords do not match'
+        formValidation.repeatPassword.error = isPasswordMatch ? undefined : t('passwordsDoNotMatch')
     }
     // If the repeat password is empty, we need to show an error message
     if (formValidation.repeatPassword.val === '') {
-        formValidation.repeatPassword.error = 'Please repeat your password'
+        formValidation.repeatPassword.error = t('pleaseRepeatYourPassword')
     }
     return true
 }
@@ -208,6 +210,19 @@ const isFormValid = computed((): boolean => {
     const hasErrors = formValidation.email.error || formValidation.password.error || formValidation.repeatPassword.error
     const isDirty = formValidation.email.dirty || formValidation.password.dirty || formValidation.repeatPassword.dirty
     return !(hasErrors && isDirty)
+})
+
+watch(locale, () => {
+    // Update error messages to reflect the new language
+    if (formValidation.email.error) {
+        isEmailValid()
+    }
+    if (formValidation.password.error) {
+        isPasswordValid()
+    }
+    if (formValidation.repeatPassword.error) {
+        isRepeatPasswordValid()
+    }
 })
 
 //Composable for the cat.

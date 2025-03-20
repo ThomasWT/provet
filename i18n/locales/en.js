@@ -19,4 +19,10 @@ export default {
     backToHome: 'Back to home',
     success: 'Success!',
     weHaveReceivedYourRequestAndWillGetBackToYouAsSoonAsPossible: 'We have received your request and we will get back to you as soon as possible.',
+    minimumOf6CharactersRequired: 'Minimum of 6 characters required',
+    pleaseEnterAPassword: 'Please enter a password',
+    passwordsDoNotMatch: 'Passwords do not match',
+    pleaseRepeatYourPassword: 'Please repeat your password',
+    pleaseEnterYourEmail: 'Please enter your email',
+    invalidEmail: 'Invalid email',
 }
