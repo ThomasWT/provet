@@ -31,7 +31,7 @@
 .signup-container {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 100dvh;
 }
 
 .signup-hero {
